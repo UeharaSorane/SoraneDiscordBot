@@ -26,6 +26,7 @@ client.on('message', msg => {
 	if(RT[0] === "rply"){
 		var BotId = client.user.id;
 		if(BotId != msg.author.id) msg.rply(RT[1]);
+	}else if(RT[0] == "NaC"){
 	}
 	
 });
