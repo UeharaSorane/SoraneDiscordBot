@@ -2,9 +2,12 @@ var rply = ["",""];
 const Dice = require('./Dice.js');
 
 function ccb(PassRate,content,Bonus){
+	/*console.log(PassRate);
+	console.log(content);
+	console.log(Bonus;*/
 	rply[0] = "rply";
 	
-	if(isNaN(PassRate)||isNaN(Bonus)||PassRate == null){
+	if(isNaN(PassRate)||(Bonus != null && isNaN(Bonus))||PassRate == null){
 		rply[1] = "ccb格式錯誤!正確用法為[ccb 成功值 描述(選填) 加成值(選填)]";
 		return rply;
 	}else{
