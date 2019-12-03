@@ -9,6 +9,7 @@ function parseInput(msg){
 	
 	let msgSplitor = (/\S+/ig);	
 	let mainMsg = msg.content.match(msgSplitor); //定義輸入字串
+	console.log(mainMsg);
 	let trigger = mainMsg[0].toString().toLowerCase(); //指定啟動詞在第一個詞&把大階強制轉成細階
 	
 /////////////////////////////////////////////////////////////////////////////////
@@ -23,7 +24,6 @@ function parseInput(msg){
 	}
 	//////////CoC擲骰//////////
 	else if(trigger.match(/^ccb$/) != null){
-		console.log(mainMsg);
 		return exports.CoCDice.ccb(mainMsg[1],mainMsg[2],mainMsg[3]);
 	}
 	
