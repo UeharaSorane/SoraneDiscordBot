@@ -23,7 +23,7 @@ client.on('message', msg => {
 	var BotId = client.user.id;
 	//console.log(client.user.id);
 	
-	//if(UserId != BotId) msg.reply(content);
+	if(UserId != BotId) msg.reply(content);
 });
 
 client.login(process.env.DISCORD_ACCESS_TOKEN).catch(console.error);
