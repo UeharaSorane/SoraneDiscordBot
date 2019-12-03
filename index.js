@@ -18,7 +18,8 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-    console.log(msg);
+	var content = msg.content;
+	console.log(content);
 });
 
 client.login(process.env.DISCORD_ACCESS_TOKEN).catch(console.error);
