@@ -15,6 +15,7 @@ function parseInput(msg){
 	
 	else{
 		console.log(msg.author.username + "說了:「" + msg.content + "」");
+		return ["NaC"," "];
 	}
 }
 
