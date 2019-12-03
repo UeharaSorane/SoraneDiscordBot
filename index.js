@@ -19,8 +19,9 @@ client.on('ready', () => {
 
 client.on('message', msg => {
 	var content = msg.content;
-	console.log(content);
-	msg.reply(content);
+	console.log(msg.author);
+	
+	//msg.reply(content);
 });
 
 client.login(process.env.DISCORD_ACCESS_TOKEN).catch(console.error);
