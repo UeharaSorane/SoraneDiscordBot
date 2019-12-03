@@ -37,7 +37,7 @@ function ccb(PassRate,content,Bonus){
 			else rply[1] = "";
 			rply[1] += "擲骰結果:" + result + "|成功率:" + RealPRate + "(";
 			if(Bonus>=0)rply[1] += "+";
-			rply[1] += Bonus + "%)";
+			rply[1] += Bonus + "%)\n\n";
 
 			if(result == 1){
 				rply[1] += "難以置信！完美大成功！！！";
