@@ -11,6 +11,7 @@ function xdy(x,y){
 	
 	Dice = RandomNumber(y);
 	resNum += Dice;
+	result += Dice
 	for(var a = 1;a<x;a++){
 		Dice = RandomNumber(y);
 		resNum += Dice;
