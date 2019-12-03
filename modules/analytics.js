@@ -17,3 +17,7 @@ function parseInput(msg){
 		console.log(msg.author.username + "說了:「" + msg.content + "」");
 	}
 }
+
+module.exports = {
+	parseInput:parseInput
+};
