@@ -10,6 +10,6 @@ function TellTime(){
 	
 }
 
-module.exports{
+module.exports = {
 	TellTime
 };
