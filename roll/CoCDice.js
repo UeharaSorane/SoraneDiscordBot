@@ -81,7 +81,7 @@ function ccb(PassRate,content,Bonus){
 					rply[1] += "好！困難成功！";
 					return rply;
 				}
-			}else if(result=<RealPRate && result>(Math.ceil(RealPRate/2))){
+			}else if(result<=RealPRate && result>(Math.ceil(RealPRate/2))){
 				if(Bonus<0 && result<=(Math.ceil(PassRate/2))){
 					rply[1] += "受到影響的緣故，應該困難成功的你僅僅只是成功而已！";
 					return rply;
