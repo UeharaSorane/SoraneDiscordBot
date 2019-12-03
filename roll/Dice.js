@@ -8,7 +8,10 @@ function xdy(x,y){
 	var resNum = 0;
 	var Dice;
 	var result = "[";
-	for(var a = 0;a<x;a++){
+	
+	Dice = RandomNumber(y);
+	resNum += Dice;
+	for(var a = 1;a<x;a++){
 		Dice = RandomNumber(y);
 		resNum += Dice;
 		result +="+" + Dice;
@@ -27,9 +30,9 @@ function caculate(msg){
 		return "TsX";
 	}else if(cal[0]>200){
 		return "TlX";
-	}else if(cal[1]<1){
+	}else if(cal[1]<=1){
 		return "TsY";
-	}else if(cal[1]>200){
+	}else if(cal[1]>1000000){
 		return "TlY";
 	}else{
 		var result = xdy(cal[0],cal[1]);
@@ -79,7 +82,7 @@ function NormalDy(msg){
 			rply[1] = "骰超過1000000面...這個我沒辦法...";
 			return rply;
 		}else{
-			rply[1] += "\n第" + a + "次:" + calResult;
+			rply[1] += "\n第" + (a+1) + "次:" + calResult;
 		}
 	}
 	
