@@ -13,7 +13,7 @@ function parseInput(msg){
 	
 	if(trigger.match(/^報時$/) != null) return exports.Basic.TellTime();
 	else if(msg.content.match(/\d/) != null){
-		return exports.Dice.NormalDy(msg.content);
+		return exports.Dice.NormalDy(mainMsg);
 	}
 	else{
 		return ["NaC"," "];
