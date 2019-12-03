@@ -66,7 +66,7 @@ function ccb(PassRate,content,Bonus){
 				if(Bonus<0){
 					rply[1] += "儘管受到影響，但你仍舊帥氣的極限成功了！";
 					return rply;
-				}else if(Bonus>0){
+				}else if(Bonus>0 && result>=Math.ceil(PassRate/5)){
 					rply[1] += "擁有加成的你，意外的極限成功了！";
 					return rply;
 				}else{
