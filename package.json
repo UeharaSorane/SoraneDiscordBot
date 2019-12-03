@@ -1,20 +1,28 @@
 {
-  "name": "Sorane",
-  "version": "1.0.0",
-  "description": "My Discord Bot",
-  "engines": {
-    "node": "6.9.1"
-  },
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "dependencies": {
+	"name": "Sorane",
+	
+	"version": "1.0.0",
+	
+	"description": "My Discord Bot",
+	
+	"engines": {
+		"node": "6.9.1"
+	},
+	
+	"main": "index.js",
+	
+	"scripts": {
+		"start": "node index.js"
+	},
+	
+	"dependencies": {
 		"Discord.js":"11.5.1"
 	},
-  "keywords": [
-    "SoraneBot",
-    "Discord"
-  ],
-  "license": "MIT"
+	
+	"keywords": [
+		"SoraneBot",
+		"Discord"
+	],
+	
+	"license": "MIT"
 }
