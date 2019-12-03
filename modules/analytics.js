@@ -17,15 +17,16 @@ function parseInput(msg){
 /////////////////////////////////////////////////////////////////////////////////
 	
 	if(trigger.match(/^報時$/) != null) return exports.Basic.TellTime();
+	else if(trigger.match(/^ccb$/) != null){
+		return exports.CoCDice.ccb(mainMsg[1],mainMsg[2],mainMsg[3]);
+	}
+	
 	
 	//////////基本擲骰//////////
 	else if(msg.content.match(/\d/) != null){
 		return exports.Dice.NormalDy(mainMsg);
 	}
 	//////////CoC擲骰//////////
-	else if(trigger.match(/^ccb$/) != null){
-		return exports.CoCDice.ccb(mainMsg[1],mainMsg[2],mainMsg[3]);
-	}
 	
 	///////全部都不是的狀況/////
 	else{
