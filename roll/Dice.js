@@ -75,7 +75,7 @@ function NormalDy(msg){
 		}else if(calResult == "TsY"){
 			rply[1] = "骰小於1面...我還真沒有那種骰子。";
 			return rply;
-		}else if(calResult == "TlY){
+		}else if(calResult == "TlY"){
 			rply[1] = "骰超過1000000面...這個我沒辦法...";
 			return rply;
 		}else{
