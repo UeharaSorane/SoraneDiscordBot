@@ -45,6 +45,9 @@ function ccb(PassRate,content,Bonus){
 			}else if(result == 100){
 				rply[1] += "大事不妙！致命性失敗！！！";
 				return rply;
+			}else if(result<100 && result>=96){
+				rply[1] += "糟糕了！大失敗！！！";
+				return rply;
 			}else if(result>RealPRate){
 				if(Bonus<0){
 					rply[1] += "原本以為會成功的你，卻受到影響而失敗了！";
@@ -92,9 +95,6 @@ function ccb(PassRate,content,Bonus){
 					rply[1] += "成功！";
 					return rply;
 				}
-			}else if(result<100 && result>=96){
-				rply[1] += "糟糕了！大失敗！！！";
-				return rply;
 			}
 		}	
 	}
