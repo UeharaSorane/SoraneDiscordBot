@@ -19,9 +19,11 @@ client.on('ready', () => {
 
 client.on('message', msg => {
 	var content = msg.content;
-	console.log(msg.author.id);
+	var UserId = msg.author.id;
+	var BotId = client.id;
+	console.log(msg.author.username);
 	
-	//msg.reply(content);
+	if(UserId != BotId) msg.reply(content);
 });
 
 client.login(process.env.DISCORD_ACCESS_TOKEN).catch(console.error);
