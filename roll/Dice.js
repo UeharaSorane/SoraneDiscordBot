@@ -5,17 +5,36 @@ function RandomNumber(Max){
 }
 
 function xdy(x,y){
-	var result = [];
-	result[x] = 0;
+	var resNum = 0;
+	var Dice;
+	var result = "[";
 	for(var a = 0;a<x;a++){
-		result[a] = RandomNumber(y);
-		result[x]+=result[a];
+		Dice = RandomNumber(y);
+		resNum += Dice;
+		result +="+" + Dice;
 	}
+	
+	result += "=" + resNum + "]";
+	
 	return result;
 }
 
 function caculate(msg){
-	msg.
+	var cal =  msg.split("d");
+	if(isNaN(cal[0])||isNaN(cal[1])){
+		return "NaC";
+	}else if(cal[0]<1){
+		return "TsX";
+	}else if(cal[0]>200){
+		return "TlX";
+	}else if(cal[1]<1){
+		return "TsY";
+	}else if(cal[1]>200){
+		return "TlY";
+	}else{
+		var result = xdy(cal[0],cal[1]);
+		return result;
+	}
 }
 
 function NormalDy(msg){
@@ -41,7 +60,7 @@ function NormalDy(msg){
 	
 	if(msg[2] != null)rply[1] = msg[2];
 	else rply[1] = "";
-	rply[1]+= "以下是骰了" + many + "次的結果:\n====================";
+	rply[1]+= "以下是骰了<" + msg[cal] + ">" + many + "次的結果:\n====================";
 	for(var a = 0;a<many;a++){
 		calResult =  caculate(msg[cal]);
 		if(calResult == "NaC"){
