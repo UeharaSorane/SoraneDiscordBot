@@ -15,6 +15,7 @@ function ccb(PassRate,content,Bonus){
 		if(Bonus == null)Bonus = 0;
 		
 		var RealPRate = Number(PassRate)+Number(Bonus);
+		console.log(PassRate + "," + Bonus + "," + result);
 		
 		if(RealPRate<1){
 			if(PassRate<1){
