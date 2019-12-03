@@ -6,7 +6,7 @@ var app = express();
 
 app.post('/', client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
-	});
+	})
 );
 
 //因為 express 預設走 port 3000，而 heroku 上預設卻不是，要透過下列程式轉換
