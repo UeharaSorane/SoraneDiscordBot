@@ -24,6 +24,10 @@ client.on('message', msg => {
 	
 	var RT = Analytics.parseInput(msg);
 	
+	if(RT[0] === "rply"){
+		msg.rply(RT[1]);
+	}
+	
 });
 
 client.login(process.env.DISCORD_ACCESS_TOKEN).catch(console.error);
