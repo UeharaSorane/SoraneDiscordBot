@@ -6,7 +6,7 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-    msg.reply(msg);
+    console.log(msg);
 });
 
 client.login(process.env.DISCORD_ACCESS_TOKEN).catch(console.error);
