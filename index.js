@@ -15,7 +15,6 @@ var server = app.listen(process.env.PORT || 8080, function() {
 });
 
 /////Discord Bot架設/////
-var BotId = client.user.id;
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
 });
@@ -25,7 +24,8 @@ client.on('message', msg => {
 	var RT = Analytics.parseInput(msg);
 	
 	if(RT[0] === "rply"){
-		msg.rply(RT[1]);
+		var BotId = client.user.id;
+		if(BotId != msg.author.id) msg.rply(RT[1]);
 	}
 	
 });
