@@ -16,7 +16,8 @@
 	},
 	
 	"dependencies": {
-		"Discord.js":"11.5.1"
+		"Discord.js":"11.5.1",
+		"node-opus":"0.3.3"
 	},
 	
 	"keywords": [
