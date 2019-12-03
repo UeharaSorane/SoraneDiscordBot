@@ -18,7 +18,7 @@ function xdy(x,y){
 		result +="+" + Dice;
 	}
 	
-	result += "=" + resNum + "]";
+	result += "]=" + resNum + "";
 	
 	return result;
 }
