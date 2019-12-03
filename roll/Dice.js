@@ -89,5 +89,6 @@ function NormalDy(msg){
 module.exports = {
 	RandomNumber,
 	xdy,
-	caculate
+	caculate,
+	NormalDy
 }
