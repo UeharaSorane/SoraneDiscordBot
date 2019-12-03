@@ -20,8 +20,8 @@ client.on('ready', () => {
 client.on('message', msg => {
 	var content = msg.content;
 	var UserId = msg.author.id;
-	var BotId = client.id;
-	console.log(client.user.id);
+	var BotId = client.user.id;
+	//console.log(client.user.id);
 	
 	//if(UserId != BotId) msg.reply(content);
 });
