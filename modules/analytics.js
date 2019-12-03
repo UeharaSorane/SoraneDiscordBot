@@ -18,8 +18,7 @@ function parseInput(msg){
 	
 	if(trigger.match(/^報時$/) != null) return exports.Basic.TellTime();
 	else if(trigger.match(/^ccb$/) != null){
-		console.log(exports.CoCDice.ccb(mainMsg[1],mainMsg[2],mainMsg[3]));
-		return ["NaC"," "];
+		return exports.CoCDice.ccb(mainMsg[1],mainMsg[2],mainMsg[3]);
 	}
 	
 	
