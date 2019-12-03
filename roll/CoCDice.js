@@ -15,7 +15,7 @@ function ccb(PassRate,content,Bonus){
 		if(Bonus == null)Bonus = 0;
 		
 		var RealPRate = Number(PassRate)+Number(Bonus);
-		console.log(PassRate + "," + Bonus + "," + result);
+		console.log(content);
 		
 		if(RealPRate<1){
 			if(PassRate<1){
@@ -82,7 +82,7 @@ function ccb(PassRate,content,Bonus){
 					rply[1] += "好！困難成功！";
 					return rply;
 				}
-			}else if(result>RealPRate && result<=(Math.ceil(RealPRate/2))){
+			}else if(result=<RealPRate && result>(Math.ceil(RealPRate/2))){
 				if(Bonus<0 && result<=(Math.ceil(PassRate/2))){
 					rply[1] += "受到影響的緣故，應該困難成功的你僅僅只是成功而已！";
 					return rply;
