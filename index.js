@@ -2,6 +2,8 @@
 const Discord = require('discord.js');
 const express = require('express');
 const client = new Discord.Client();
+
+const Analytics = require('./modules/analytics.js');
 /////Express架設/////
 var app = express();
 
@@ -13,17 +15,15 @@ var server = app.listen(process.env.PORT || 8080, function() {
 });
 
 /////Discord Bot架設/////
+var BotId = client.user.id;
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
 });
 
 client.on('message', msg => {
-	var content = msg.content;
-	var UserId = msg.author.id;
-	var BotId = client.user.id;
-	//console.log(client.user.id);
 	
-	if(UserId != BotId) msg.reply(content);
+	var RT = Analytics.parseInput(msg);
+	
 });
 
 client.login(process.env.DISCORD_ACCESS_TOKEN).catch(console.error);
