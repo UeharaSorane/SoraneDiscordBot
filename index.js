@@ -19,7 +19,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
 	var content = msg.content;
-	console.log(msg.author.User);
+	console.log(msg.author);
 	
 	//msg.reply(content);
 });
