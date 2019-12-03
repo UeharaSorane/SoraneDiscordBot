@@ -15,7 +15,6 @@ function ccb(PassRate,content,Bonus){
 		if(Bonus == null)Bonus = 0;
 		
 		var RealPRate = Number(PassRate)+Number(Bonus);
-		console.log(content);
 		
 		if(RealPRate<1){
 			if(PassRate<1){
@@ -34,9 +33,9 @@ function ccb(PassRate,content,Bonus){
 				return rply;
 			}
 		}else{
-			if(content != undefined)rply[1] = "進行了[" + content + "]\n";
+			if(content != null)rply[1] = "進行了[" + content + "]\n";
 			else rply[1] = "";
-			rply[1] = "擲骰結果:" + result + "成功率:" + RealPRate + "(";
+			rply[1] += "擲骰結果:" + result + "成功率:" + RealPRate + "(";
 			if(Bonus>=0)rply[1] += "+";
 			rply[1] += Bonus + "%)";
 
