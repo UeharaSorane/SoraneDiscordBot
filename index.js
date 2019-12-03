@@ -27,6 +27,7 @@ client.on('message', msg => {
 		var BotId = client.user.id;
 		if(BotId != msg.author.id) msg.reply(RT[1]);
 	}else if(RT[0] == "NaC"){
+		console.log(msg.author.username + "說了:「" + msg.content + "」");
 	}
 	
 });
