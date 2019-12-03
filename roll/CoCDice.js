@@ -14,7 +14,7 @@ function ccb(PassRate,content,Bonus){
 		var result = Dice.RandomNumber(100);
 		if(Bonus == null)Bonus = 0;
 		
-		var RealPRate = (PassRate+Bonus);
+		var RealPRate = Number(PassRate)+Number(Bonus);
 		
 		if(RealPRate<1){
 			if(PassRate<1){
