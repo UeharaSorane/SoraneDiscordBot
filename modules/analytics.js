@@ -12,12 +12,10 @@ function parseInput(msg){
 	let trigger = mainMsg[0].toString().toLowerCase(); //指定啟動詞在第一個詞&把大階強制轉成細階
 	
 	if(trigger.match(/^報時$/) != null) return exports.Basic.TellTime();
-	else if(trigger.match(/^sp1$/) != null){
-		console.log(exports.Dice.xdy(4,6));
-		return ["NaC"," "];
+	else if(msg.content.match(/\d/) != null){
+		return exports.Dice.NormalDy(msg.content);
 	}
 	else{
-		console.log(msg.author.username + "說了:「" + msg.content + "」");
 		return ["NaC"," "];
 	}
 }
