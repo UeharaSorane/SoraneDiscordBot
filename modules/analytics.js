@@ -11,8 +11,7 @@ function parseInput(msg){
 	let mainMsg = msg.content.match(msgSplitor); //定義輸入字串
 	let trigger = mainMsg[0].toString().toLowerCase(); //指定啟動詞在第一個詞&把大階強制轉成細階
 	
-	if(trigger.match(/^星爆$/) != null) return ["rply","c8763"];
-	
+	if(trigger.match(/^報時$/) != null) return exports.Basic.TellTime();
 	else{
 		console.log(msg.author.username + "說了:「" + msg.content + "」");
 		return ["NaC"," "];
