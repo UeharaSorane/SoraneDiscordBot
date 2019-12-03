@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const Express = require('express');
+const express = require('express');
 
 var app = express();
 
