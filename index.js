@@ -9,4 +9,4 @@ client.on('message', msg => {
     msg.reply(msg);
 });
 
-client.login(process.env.TOKEN);
+client.login(process.env.DISCORD_ACCESS_TOKEN);
