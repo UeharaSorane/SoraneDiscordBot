@@ -9,5 +9,4 @@ client.on('message', msg => {
     msg.reply(msg);
 });
 
-client.login('NjUxMzEzNDk1NDg0MTM3NDcz.XeYUCw.4Z2V2bBjhRkFtzFvxANs0vzIxq8').
-  then(console.log("登入成功！")).catch(console.error);
+client.login('NjUxMzEzNDk1NDg0MTM3NDcz.XeYUCw.4Z2V2bBjhRkFtzFvxANs0vzIxq8').catch(console.error);
