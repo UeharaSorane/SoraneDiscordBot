@@ -22,7 +22,7 @@ function parseInput(msg){
 		return exports.Dice.NormalDy(mainMsg);
 	}
 	//////////CoC擲骰//////////
-	else if(trigger == "ccb")return exports.CoCDice.ccb(mainMsg[1],mainMsg[2],mainMsg[3]);
+	else if(trigger.match(/^ccb$/) != null)return exports.CoCDice.ccb(mainMsg[1],mainMsg[2],mainMsg[3]);
 	
 	///////全部都不是的狀況/////
 	else{
