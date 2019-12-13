@@ -20,7 +20,8 @@ function parseInput(Sys,msg,uid,uname){
 	else if(trigger.match(/^ccb$/) != null){
 		return exports.CoCDice.ccb(mainMsg[1],mainMsg[2],mainMsg[3],Sys,uname);
 	}
-	
+	else if(trigger.match(/^ccrt$/) != null) return exports.CoCCrazy.ccrt(Sys,uname);
+	else if(trigger.match(/^ccsu$/) != null) return exports.CoCCrazy.ccsu(Sys,uname);
 	
 	//////////基本擲骰//////////
 	else if(msg.match(/\d/) != null){
