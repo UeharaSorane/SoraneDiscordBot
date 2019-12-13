@@ -28,7 +28,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
 	
-	var RT = Analytics.parseInput(msg.content,"Discord");
+	var RT = Analytics.parseInput(msg.content);
 	
 	if(RT[0] === "rply"){
 		var BotId = client.user.id;
@@ -49,7 +49,7 @@ bot.on('message', function(event) {
 		var msg = event.message;
 		////////////////////////////
 		
-		var RT = Analytics.parseInput(msg,"Line");
+		var RT = Analytics.parseInput(msg);
 		if(RT[0] === "rply"){
 			event.reply(RT[1]).then(function (data) {
 			}).catch(function (error) {
