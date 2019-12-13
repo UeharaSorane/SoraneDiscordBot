@@ -80,7 +80,7 @@ function caculate(msg){
 	console.log("result = " + result);
 	
 	try{
-		result += "=" + Math.eval(cal);
+		result += "=" + eval(cal);
 	}catch(e){
 		console.log("這算式有問題");
 		result = "NaC";
