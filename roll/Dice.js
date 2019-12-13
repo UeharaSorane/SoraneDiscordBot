@@ -30,8 +30,10 @@ function caculate(msg){
 	for(var a = 0;a<temp.length;a++){
 		if(isNaN(temp[a])){
 			if(temp[a] == ",")return "NaC";
-			else if(isNaN(temp[a-1]) || isNaN(temp[a+1])) mt1 += temp[a];
-			else mt1 += "," + temp[a] + ",";
+			
+			if(!isNaN(temp[a-1])) mt1 += ",";
+			mt1 += temp[a];
+			if(!isNaN(temp[a+1])) mt1 += ",";
 		}
 		else mt1 += temp[a];
 	}
