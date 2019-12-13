@@ -18,13 +18,13 @@ function parseInput(Sys,msg,uid,uname){
 	
 	if(trigger.match(/^報時$/) != null) return exports.Basic.TellTime();
 	else if(trigger.match(/^ccb$/) != null){
-		return exports.CoCDice.ccb(mainMsg[1],mainMsg[2],mainMsg[3]);
+		return exports.CoCDice.ccb(mainMsg[1],mainMsg[2],mainMsg[3],Sys,uname);
 	}
 	
 	
 	//////////基本擲骰//////////
 	else if(msg.match(/\d/) != null){
-		return exports.Dice.NormalDy(mainMsg,Sys,uname);
+		return exports.Dice.NormalDy(mainMsg);
 	}
 	//////////CoC擲骰//////////
 	
