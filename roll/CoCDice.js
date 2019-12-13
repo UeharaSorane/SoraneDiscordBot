@@ -16,7 +16,7 @@ function ccb(PassRate,Bonus,content,Sys,uname){
 		if(isNaN(Bonus) && content != null){
 			rply[1] = "ccb格式錯誤!正確用法為[ccb 成功值 加成值(選填) 描述(選填)]";
 			return rply;
-		}else{
+		}else if(content == null){
 			content = Bonus;
 			Bonus = 0;
 		}
