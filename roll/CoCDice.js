@@ -1,7 +1,7 @@
 var rply = ["",""];
 const Dice = require('./Dice.js');
 
-function ccb(PassRate,Bonus,content){
+function ccb(PassRate,Bonus,content,Sys,uname){
 	/*console.log(PassRate);
 	console.log(content);
 	console.log(Bonus;*/
@@ -33,8 +33,13 @@ function ccb(PassRate,Bonus,content){
 				return rply;
 			}
 		}else{
-			if(content != null)rply[1] = "進行了[" + content + "]\n";
+			if(content != null){
+				if(Sys == "Line")rply[1] = uname;
+				else rply = "";
+				rply[1] += "進行了[" + content + "]\n";
+			}
 			else rply[1] = "";
+			
 			rply[1] += "擲骰結果:" + result + "|成功率:" + RealPRate + "(";
 			if(Bonus>=0)rply[1] += "+";
 			rply[1] += Bonus + "%)\n\n";
