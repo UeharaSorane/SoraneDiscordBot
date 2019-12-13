@@ -68,7 +68,7 @@ function caculate(msg){
 	}
 	try{
 		result += "=" + Math.eval(cal);
-	}catch{
+	}catch(e){
 		result = "NaC";
 	}
 	return result;
