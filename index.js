@@ -46,7 +46,7 @@ bot.on('message', function(event) {
 		
 		/////以下是擷取下來的資源/////
 		var src = event.source;
-		var msg = event.message;
+		var msg = event.message.text;
 		////////////////////////////
 		
 		var RT = Analytics.parseInput(msg);
