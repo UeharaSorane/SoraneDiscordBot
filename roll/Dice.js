@@ -69,7 +69,7 @@ function caculate(msg){
 	try{
 		result += "=" + Math.eval(cal);
 		return result;
-	}catch;
+	}catch
 }
 
 function NormalDy(msg){
