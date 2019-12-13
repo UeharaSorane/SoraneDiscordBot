@@ -24,7 +24,7 @@ function parseInput(Sys,msg,uid,uname){
 	
 	//////////基本擲骰//////////
 	else if(msg.match(/\d/) != null){
-		return exports.Dice.NormalDy(mainMsg);
+		return exports.Dice.NormalDy(mainMsg,Sys,uname);
 	}
 	//////////CoC擲骰//////////
 	
