@@ -33,6 +33,8 @@ function caculate(msg){
 	}
 	
 	var mt2 = mt1.split(",");
+	
+	console.log(mt2);
 	var cal = "";
 	var result = "";
 	
