@@ -5,7 +5,7 @@ require('fs').readdirSync('./roll/').forEach(function(file) {
 	}
 });
 
-function parseInput(msg){
+function parseInput(Sys,msg){
 	
 	let msgSplitor = (/\S+/ig);	
 	let mainMsg = msg.match(msgSplitor); //定義輸入字串
