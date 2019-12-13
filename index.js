@@ -28,7 +28,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
 	
-	var RT = Analytics.parseInput(msg.content);
+	var RT = Analytics.parseInput("Discord",msg.content);
 	
 	if(RT[0] === "rply"){
 		var BotId = client.user.id;
@@ -40,6 +40,8 @@ client.on('message', msg => {
 });
 
 client.login(process.env.DISCORD_ACCESS_TOKEN).catch(console.error);
+
+
 /////Line Bot架設/////
 bot.on('message', function(event) {
 	event.source.profile().then(function (profile) {
@@ -49,7 +51,7 @@ bot.on('message', function(event) {
 		var msg = event.message.text;
 		////////////////////////////
 		
-		var RT = Analytics.parseInput(msg);
+		var RT = Analytics.parseInput("Line",msg);
 		if(RT[0] === "rply"){
 			event.reply(RT[1]).then(function (data) {
 			}).catch(function (error) {
