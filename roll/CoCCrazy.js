@@ -1,5 +1,4 @@
 var rply = ["",""];
-const Dice = require('./Dice.js');
 
 ////////////////////////////////////////
 //////////////// 恐懼
@@ -236,3 +235,46 @@ var cocManias = [
 	['100) 動物恐懼症（Zoophobia）：對動物的恐懼。']
 
 ];
+
+function ccrt(Sys,uname) {
+	rply[0] = "rply";
+	var rollcc = Math.floor(Math.random() * 10);
+	var time = Math.floor(Math.random() * 10) + 1;
+	var PP = Math.floor(Math.random() * 100);
+	
+	if(Sys == "Line")rply[1] = uname;
+	else rply[1] = "";
+	
+	if (rollcc <= 7) {
+		rply[1] += cocmadnessrt[rollcc] + '\n症狀持續' + time + '輪數';
+	} else if (rollcc == 8) {
+		rply[1] += cocmadnessrt[rollcc] + '\n症狀持續' + time + '輪數' + ' \n' + cocManias[PP];
+	} else if (rollcc == 9) {
+		rply[1] += cocmadnessrt[rollcc] + '\n症狀持續' + time + '輪數' + ' \n' + cocPhobias[PP];
+	};
+	return rply;
+}
+function ccsu(Sys,uname) {
+	rply[0] = "rply";
+	
+	var rollcc = Math.floor(Math.random() * 10);
+	var time = Math.floor(Math.random() * 10) + 1;
+	var PP = Math.floor(Math.random() * 100);
+	
+	if(Sys == "Line")rply[1] = uname;
+	else rply[1] = "";
+	
+	if (rollcc <= 7) {
+		rply[1] += cocmadnesssu[rollcc] + '\n症狀持續' + time + '小時';
+	} else if (rollcc == 8) {
+		rply[1] += cocmadnesssu[rollcc] + '\n症狀持續' + time + '小時' + ' \n' + cocManias[PP];
+	} else if (rollcc == 9) {
+		rply[1] += cocmadnesssu[rollcc] + '\n症狀持續' + time + '小時' + ' \n' + cocPhobias[PP];
+	};
+	return rply;
+}
+
+module.exports = {
+	ccrt,
+	ccsu
+};
