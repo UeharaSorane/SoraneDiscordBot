@@ -69,6 +69,7 @@ function caculate(msg){
 		}
 	}
 	console.log("cal = " + cal);
+	console.log("result = " + result);
 	
 	try{
 		result += "=" + Math.eval(cal);
