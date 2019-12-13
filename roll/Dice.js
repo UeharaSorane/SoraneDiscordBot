@@ -66,11 +66,11 @@ function caculate(msg){
 			cal += mt2[b];
 		}
 	}
-	try{
+	/*try{
 		result += "=" + Math.eval(cal);
 		return result;
 	}catch{
-	}
+	}*/
 }
 
 function NormalDy(msg){
