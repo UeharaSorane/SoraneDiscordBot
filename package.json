@@ -18,13 +18,17 @@
 	"dependencies": {
 		"discord.js":"11.5.1",
 		"node-opus":"0.3.3",
-		"express": "4.13.3"
+		"express": "4.13.3",
+		"linebot": "1.4.1",
+    		"mongoose":"5.4.3",
+    		"node-wit":"5.0.0"
 
 	},
 	
 	"keywords": [
 		"SoraneBot",
-		"Discord"
+		"Discord",
+		"Line"
 	],
 	
 	"license": "MIT"
