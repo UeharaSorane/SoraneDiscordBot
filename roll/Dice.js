@@ -40,7 +40,6 @@ function caculate(msg){
 	
 	var mt2 = mt1.split(",");
 	
-	console.log(mt2);
 	var cal = "";
 	var result = "";
 	
@@ -71,8 +70,10 @@ function caculate(msg){
 				cal += mt2[b];
 			}
 		}else{
-			result += mt2[b];
-			cal += mt2[b];
+			if(!(mt2[b-1] == "d" || mt2[b+1] == "d")){
+				result += mt2[b];
+				cal += mt2[b];
+			}
 		}
 	}
 	console.log("cal = " + cal);
