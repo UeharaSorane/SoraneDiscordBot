@@ -64,11 +64,12 @@ function caculate(msg){
 				cal += mt2[b];
 			}
 		}else{
-			console.log(cal);
 			result += mt2[b];
 			cal += mt2[b];
 		}
 	}
+	console.log("cal = " + cal);
+	
 	try{
 		result += "=" + Math.eval(cal);
 	}catch(e){
