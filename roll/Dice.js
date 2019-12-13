@@ -64,7 +64,6 @@ function caculate(msg){
 					}
 				}
 			}else{
-				if()
 				
 				result += mt2[b];
 				cal += mt2[b];
