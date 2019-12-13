@@ -20,24 +20,57 @@ function xdy(x,y){
 	
 	result += "]=" + resNum + "";
 	
-	return result;
+	return [result,resNum];
 }
 
 function caculate(msg){
-	var cal =  msg.split("d");
-	if(isNaN(cal[0])||isNaN(cal[1])){
-		return "NaC";
-	}else if(cal[0]<1){
-		return "TsX";
-	}else if(cal[0]>200){
-		return "TlX";
-	}else if(cal[1]<=1){
-		return "TsY";
-	}else if(cal[1]>1000000){
-		return "TlY";
-	}else{
-		var result = xdy(cal[0],cal[1]);
+	var temp = msg.split("");
+	var mt1 = "";
+	
+	for(var a = 0;a<temp.length;a++){
+		if(isNaN(temp[a])) mt1 += "," + temp[a] + ",";
+		else mt1 += temp[a];
+	}
+	
+	var mt2 = mt1.split(",");
+	var cal = "";
+	var result = "";
+	
+	for(var b = 0;b<mt2.length;b++){
+		if(isNaN(mt2[b])){
+			if(b == 0)return "NaC";
+			if(mt2[b] == "d"){
+				if(isNaN(mt2[b-1]) || isNaN(mt2[b+1]))return "NaC";
+				else{
+					if(mt2[b-1]<1){
+						return "TsX";
+					}else if(mt2[b-1]>200){
+						return "TlX";
+					}else if(mt2[b+1]<=1){
+						return "TsY";
+					}else if(mt2[b+1]>1000000){
+						return "TlY";
+					}else{
+						
+						var res = xdy(mt2[b-1],mt2[b+1]);
+						result += res[0];
+						cal += res[1];
+					}
+				}
+			}else{
+				result += mt2[b];
+				cal += mt2[b];
+			}
+		}else{
+			result += mt2[b];
+			cal += mt2[b];
+		}
+	}
+	try{
+		result += "=" + Math.eval(cal);
 		return result;
+	}catch{
+		return "NaC";
 	}
 }
 
