@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const express = require('express');
 const Line = require('linebot');
 
-var bot = linebot({
+var bot = Line({
   	channelSecret: process.env.LINE_CHANNEL_SECRET, //這裡是讓系統抓在Heroku設定的數據
   	channelAccessToken: process.env.LINE_CHANNEL_ACCESSTOKEN // 同上
 });
