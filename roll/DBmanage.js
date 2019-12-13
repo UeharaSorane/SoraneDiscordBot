@@ -9,3 +9,4 @@ mongoose.connect(mongoDB, function (err) {
 	if(err) throw err;
 	else console.log('連線成功，可以正常吃芒果!');
 });
+
