@@ -18,7 +18,7 @@ function xdy(x,y){
 		result +="+" + Dice;
 	}
 	
-	result += "]=" + resNum + "";
+	result += "]";
 	
 	return [result,resNum];
 }
@@ -28,7 +28,11 @@ function caculate(msg){
 	var mt1 = "";
 	
 	for(var a = 0;a<temp.length;a++){
-		if(isNaN(temp[a])) mt1 += "," + temp[a] + ",";
+		if(isNaN(temp[a])){
+			if(temp[a] == ",")return "NaC";
+			else if(isNaN(temp[a-1])) mt1 += temp[a];
+			else mt1 += "," + temp[a] + ",";
+		}
 		else mt1 += temp[a];
 	}
 	
@@ -60,6 +64,8 @@ function caculate(msg){
 					}
 				}
 			}else{
+				if()
+				
 				result += mt2[b];
 				cal += mt2[b];
 			}
@@ -74,6 +80,7 @@ function caculate(msg){
 	try{
 		result += "=" + Math.eval(cal);
 	}catch(e){
+		console.log("這算式有問題");
 		result = "NaC";
 	}
 	return result;
