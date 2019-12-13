@@ -8,7 +8,7 @@ require('fs').readdirSync('./roll/').forEach(function(file) {
 function parseInput(msg){
 	
 	let msgSplitor = (/\S+/ig);	
-	let mainMsg = msg.content.match(msgSplitor); //定義輸入字串
+	let mainMsg = msg.match(msgSplitor); //定義輸入字串
 	console.log(mainMsg);
 	let trigger = mainMsg[0].toString().toLowerCase(); //指定啟動詞在第一個詞&把大階強制轉成細階
 	
@@ -23,7 +23,7 @@ function parseInput(msg){
 	
 	
 	//////////基本擲骰//////////
-	else if(msg.content.match(/\d/) != null){
+	else if(msg.match(/\d/) != null){
 		return exports.Dice.NormalDy(mainMsg);
 	}
 	//////////CoC擲骰//////////
