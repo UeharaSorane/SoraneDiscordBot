@@ -69,9 +69,7 @@ function caculate(msg){
 	try{
 		result += "=" + Math.eval(cal);
 		return result;
-	}catch{
-		return "NaC";
-	}
+	}catch return "NaC";
 }
 
 function NormalDy(msg){
