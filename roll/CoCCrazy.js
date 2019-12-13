@@ -242,8 +242,8 @@ function ccrt(Sys,uname) {
 	var time = Math.floor(Math.random() * 10) + 1;
 	var PP = Math.floor(Math.random() * 100);
 	
-	if(Sys == "Line")rply[1] = uname;
-	else rply[1] = "";
+	if(Sys == "Line")rply[1] = uname + "進入下列的瘋狂狀態:\n";
+	else rply[1] = "進入下列的瘋狂狀態:\n";
 	
 	if (rollcc <= 7) {
 		rply[1] += cocmadnessrt[rollcc] + '\n症狀持續' + time + '輪數';
@@ -261,8 +261,8 @@ function ccsu(Sys,uname) {
 	var time = Math.floor(Math.random() * 10) + 1;
 	var PP = Math.floor(Math.random() * 100);
 	
-	if(Sys == "Line")rply[1] = uname;
-	else rply[1] = "";
+	if(Sys == "Line")rply[1] = uname + "進入下列的瘋狂狀態:\n";
+	else rply[1] = "進入下列的瘋狂狀態:\n";
 	
 	if (rollcc <= 7) {
 		rply[1] += cocmadnesssu[rollcc] + '\n症狀持續' + time + '小時';
