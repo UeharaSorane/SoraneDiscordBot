@@ -27,14 +27,15 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-	
-	var RT = Analytics.parseInput("Discord",msg.content);
+	var BotId = client.user.id;
+	var RT;
+	if(msg.author.id != BotId)RT = Analytics.parseInput("Discord",msg.content,msg.author.id,msg.author.username);
+	else RT = ["NaC",""];
 	
 	if(RT[0] === "rply"){
-		var BotId = client.user.id;
 		if(BotId != msg.author.id) msg.reply(RT[1]);
 	}else if(RT[0] == "NaC"){
-		console.log(msg.author.username + "說了:「" + msg.content + "」(Dis)");
+		if(BotId != msg.author.id) console.log(msg.author.username + "說了:「" + msg.content + "」(Dis)");
 	}
 	
 });
@@ -51,7 +52,7 @@ bot.on('message', function(event) {
 		var msg = event.message.text;
 		////////////////////////////
 		
-		var RT = Analytics.parseInput("Line",msg);
+		var RT = Analytics.parseInput("Line",msg,src.userId,profile.displayName);
 		if(RT[0] === "rply"){
 			event.reply(RT[1]).then(function (data) {
 			}).catch(function (error) {
