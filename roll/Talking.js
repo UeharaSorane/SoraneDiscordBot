@@ -7,7 +7,8 @@ var WitClient = new Wit({
 
 var Chat;
 
-function Chatting(){
+function chatting(InputChat){
+	Chat = InputChat;
 }
 
 module.exports = {
