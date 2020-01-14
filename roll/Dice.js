@@ -92,6 +92,7 @@ function NormalDy(msg){
 	rply[0] = "rply";
 	var many;
 	var cal;
+
 	if(!isNaN(msg[0])){
 		if(msg[0]<1){
 			rply[1] = "我有點無法理解小於1次是什麼概念...";
@@ -108,6 +109,11 @@ function NormalDy(msg){
 		cal = 0;
 	}
 	var calResult;
+	
+	if(msg[cal].match(/d/) == null){
+		rply =["NaC"," "];
+		return rply;
+	}
 	
 	if(msg[2] != null)rply[1] = msg[2];
 	else rply[1] = "";
