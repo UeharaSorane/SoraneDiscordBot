@@ -9,7 +9,7 @@ var WitClient = new Wit({
 
 var Chat;
 
-function chatting(inputChat){
+function chatting(inputChat,uname){
 	rply[0] = "rply";
 	
 	setChat(inputChat);
