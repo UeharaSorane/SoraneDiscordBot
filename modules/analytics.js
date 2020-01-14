@@ -18,6 +18,8 @@ function parseInput(Sys,msg,uid,uname){
 		if(trigger.match(/^聊天模式$/) != null){
 			Chatmode = false;
 			return ["rply","聊天模式關閉，指令將可以作用"];
+		}else{
+			return exports.Talking.chatting(msg,uname);
 		}
 		
 		return ["NaC",""];
