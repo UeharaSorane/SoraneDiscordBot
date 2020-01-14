@@ -17,7 +17,7 @@ function parseInput(Sys,msg,uid,uname){
 	if(Chatmode == true){
 		if(trigger.match(/^聊天模式$/) != null){
 			Chatmode = false;
-			return ["rply","聊天模式開啟，指令將可以作用"];
+			return ["rply","聊天模式關閉，指令將可以作用"];
 		}
 		
 		return ["NaC",""];
