@@ -23,8 +23,10 @@ function chatting(inputChat,uname){
 	return rply;
 }
 
+
 function setChat(inputChat){
 	Chat = inputChat;
+	console.log(Chat);
 }
 
 module.exports = {
