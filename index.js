@@ -40,6 +40,7 @@ client.on('message', msg => {
 	var RT;
 	if(msg.author.id != BotId){
 		if(msg.content == "聊天模式"){
+			console.log(chatmode);
 			if(!chatmode){
 				chattmode = true;
 				msg.reply("聊天模式開啟，指令將無法作用");
