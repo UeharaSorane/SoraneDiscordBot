@@ -1,10 +1,8 @@
 var rply = ["",""];
 const Dice = require('./Dice.js');
 
-function ccb(PassRate,Bonus,content,Sys,uname){
-	/*console.log(PassRate);
-	console.log(content);
-	console.log(Bonus;*/
+function ccb(PassRate,Bonus,content,uname){
+
 	rply[0] = "rply";
 	
 	if(isNaN(PassRate)||PassRate == null){
@@ -45,8 +43,7 @@ function ccb(PassRate,Bonus,content,Sys,uname){
 		}
 	}else{
 		if(content != null){
-			if(Sys == "Line")rply[1] = uname;
-			else rply[1] = "";
+			rply[1] = uname;
 			rply[1] += "進行了[" + content + "]\n";
 		}
 		else rply[1] = "";
