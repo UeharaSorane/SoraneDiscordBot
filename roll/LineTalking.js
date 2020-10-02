@@ -40,7 +40,7 @@ function SecretTalk(UserID,Channal,myText) {
 		        return rply;
 		}else{
 			rply[0] = 'push';
-		        bot.push(talkChannal[Channal-1].channal_line_id,myText);
+		        rply[1] = myText;
 		        return rply;
 		}
 	}
