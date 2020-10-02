@@ -3,7 +3,7 @@ const indexLine = require('./indexLine.js')
 
 const Discord = require('discord.js');
 const express = require('express');
-const Line = require('linebot');
+//const Line = require('linebot');
 const Talking = require('./roll/Talking.js');
 var {Wit, log} = require("node-wit");
 var WitClient = new Wit({
@@ -11,10 +11,11 @@ var WitClient = new Wit({
 });
 
 
-var bot = Line({
+/*var bot = Line({
   	channelSecret: process.env.LINE_CHANNEL_SECRET, //這裡是讓系統抓在Heroku設定的數據
   	channelAccessToken: process.env.LINE_CHANNEL_ACCESSTOKEN // 同上
-});
+});*/
+
 const client = new Discord.Client();
 
 const Analytics = require('./modules/analytics.js');
@@ -81,7 +82,9 @@ client.login(process.env.DISCORD_ACCESS_TOKEN).catch(console.error);
 
 
 /////Line Bot架設/////
-bot.on('message', function(event) {
+
+
+/*bot.on('message', function(event) {
 	event.source.profile().then(function (profile) {
 		
 		/////以下是擷取下來的資源/////
@@ -99,4 +102,4 @@ bot.on('message', function(event) {
 		}
 	});
 
-});
+});*/
