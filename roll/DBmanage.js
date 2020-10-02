@@ -36,6 +36,10 @@ Channal.find(function(err,Channals){
 	}
 });
 
+function getChannalDB(){
+	return talkChannal;
+}
+
 function ChannalUpdate(ChannalT){
 	Channal.find({channal_id: ChannalT.channal_id},function(err,Channals){
 		if(Channals.length == 0){
@@ -45,9 +49,15 @@ function ChannalUpdate(ChannalT){
 			
 			NewChannal.save(function(err){
 				if(err) throw err;
-				else console.log('資料正確儲存');
+				else console.log('Line頻道資料正確儲存');
 			});
 		}
 	});
 }
 ////////////////////////////////
+
+
+module.exports = {
+	getChannalDB,
+	ChannalUpdate
+};
