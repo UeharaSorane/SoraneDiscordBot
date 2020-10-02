@@ -35,4 +35,19 @@ Channal.find(function(err,Channals){
 		console.log("Line頻道資料，更新完成");
 	}
 });
+
+function ChannalUpdate(ChannalT){
+	Channal.find({channal_id: ChannalT.channal_id},function(err,Channals){
+		if(Channals.length == 0){
+			console.log(ChannalT);
+			
+			var NewChannal = new Channal(ChannalT);
+			
+			NewChannal.save(function(err){
+				if(err) throw err;
+				else console.log('資料正確儲存');
+			});
+		}
+	});
+}
 ////////////////////////////////
