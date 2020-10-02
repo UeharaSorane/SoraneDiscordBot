@@ -5,9 +5,7 @@ require('fs').readdirSync('./roll/').forEach(function(file) {
 	}
 });
 
-var Chatmode = false;
-
-function parseInput(Sys,msg,uid,uname){
+function parseInput(msg,uid,uname){
 	
 	let msgSplitor = (/\S+/ig);	
 	let mainMsg = msg.match(msgSplitor); //定義輸入字串
@@ -21,10 +19,10 @@ function parseInput(Sys,msg,uid,uname){
 	if(trigger.match(/^報時$/) != null) return exports.Basic.TellTime();
 	else if(trigger.match(/運氣/) != null) return exports.funny.randomLuck(mainMsg);
 	else if(trigger.match(/^ccb$/) != null){
-		return exports.CoCDice.ccb(mainMsg[1],mainMsg[2],mainMsg[3],Sys,uname);
+		return exports.CoCDice.ccb(mainMsg[1],mainMsg[2],mainMsg[3],uname);
 	}
-	else if(trigger.match(/^ccrt$/) != null) return exports.CoCCrazy.ccrt(Sys,uname);
-	else if(trigger.match(/^ccsu$/) != null) return exports.CoCCrazy.ccsu(Sys,uname);
+	else if(trigger.match(/^ccrt$/) != null) return exports.CoCCrazy.ccrt(uname);
+	else if(trigger.match(/^ccsu$/) != null) return exports.CoCCrazy.ccsu(uname);
 
 	//////////基本擲骰//////////
 	else if(trigger.match("d") !=null || mainMsg[1].match("d") !=null){
