@@ -41,6 +41,8 @@ bot.on('message', function(event) {
 			event.reply(RT[1]).then(function (data) {
 			}).catch(function (error) {
 			});
+		}if(RT[0] === "push"){
+			bot.push(RT[1],RT[2]);
 		}else if(RT[0] == "NaC"){
 			console.log(profile.displayName + "說了:「" + msg + "」(Line)");
 		}
