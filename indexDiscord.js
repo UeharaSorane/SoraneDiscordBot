@@ -33,7 +33,7 @@ client.on('message', msg => {
 		}else{
 			if(chatmode){
 				WitClient.message(Chat, {}).then((data) => {
-					if(msg.author.id != BotId)RT = Talking.chatting("Discord",msg.content,msg.author.id,msg.author.username,data);
+					if(msg.author.id != BotId)RT = Talking.chatting(msg.content,msg.author.id,msg.author.username,data);
 					else RT = ["NaC",""];
 
 					if(RT[0] === "rply"){
@@ -43,7 +43,7 @@ client.on('message', msg => {
 					}
 				}).catch(console.error);
 			}else{
-				if(msg.author.id != BotId)RT = Analytics.parseInput("Discord",msg.content,msg.author.id,msg.author.username);
+				if(msg.author.id != BotId)RT = Analytics.parseInput(msg.content,msg.author.id,msg.author.username);
 				else RT = ["NaC",""];
 
 				if(RT[0] === "rply"){
