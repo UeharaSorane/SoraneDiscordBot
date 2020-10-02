@@ -1,4 +1,6 @@
 /////引入函數庫/////
+const indexLine = require('./indexLine.js')
+
 const Discord = require('discord.js');
 const express = require('express');
 const Line = require('linebot');
