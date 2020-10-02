@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb://b88009005:b09050905@ds229312.mlab.com:29312/linetest';
+var mongoDB = 'mongodb+srv://b88009005:b09050905@linetest.qher8.gcp.mongodb.net/linetest?retryWrites=true&w=majority';
 
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
