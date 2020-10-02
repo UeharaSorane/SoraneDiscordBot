@@ -1,7 +1,7 @@
 var rply = [];
 const DBmanage = require('./DBmanage.js');
 
-var TalkChannal = DBmanage.getChannalDB();
+var talkChannal = DBmanage.getChannalDB();
 
 function ChannalCheck(UserID,UserN){
 	for(var a = 0; a<talkChannal.length;a++){
