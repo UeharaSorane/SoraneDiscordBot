@@ -1,8 +1,9 @@
 var rply = ["",""];
-var Time = new Date();
 
 
 function TellTime(){
+	
+	var Time = new Date();
 	Time.now();	
 	rply[0]= "rply";
 	rply[1] = "現在是:西元" + Time.getFullYear()  + "/" + (Time.getMonth() + 1) + "/" + Time.getDate() + "\
