@@ -10,7 +10,7 @@ var WitClient = new Wit({
 
 const client = new Discord.Client();
 
-const Analytics = require('./modules/analytics.js');
+const Analytics = require('./modules/analyticsDiscord.js');
 var chatmode = false;
 /////Discord Bot架設/////
 client.on('ready', () => {
