@@ -13,6 +13,16 @@ var bot = Line({
   	channelAccessToken: process.env.LINE_CHANNEL_ACCESSTOKEN // 同上
 });
 
+/////Express架設/////
+var app = express();
+app.post('/', bot.parser());
+
+//因為 express 預設走 port 3000，而 heroku 上預設卻不是，要透過下列程式轉換
+var server = app.listen(process.env.PORT || 8080, function() {
+	var port = server.address().port;
+	console.log("App now running on port", port);
+});
+
 var chatmode = false;
 
 /////Line Bot架設/////
