@@ -16,7 +16,7 @@ function parseInput(msg,uid,uname){
 /////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////分析開始//////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////
-	if(trigger.match(/^私訊$/) != null)return exports.LineTalking.SecretTalk(uid,uname,mainMsg[1]);
+	if(trigger.match(/^私訊$/) != null)return exports.LineTalking.SecretTalk(uid,mainMsg[1],mainMsg[2]);
 	else if(trigger.match(/^報時$/) != null) return exports.Basic.TellTime();
 	else if(trigger.match(/運氣/) != null) return exports.funny.randomLuck(mainMsg);
 	else if(trigger.match(/^ccb$/) != null){
