@@ -1,3 +1,4 @@
+var rply = [];
 const DBmanage = require('./DBmanage.js');
 
 var TalkChannal = DBmanage.getChannalDB();
