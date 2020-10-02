@@ -27,7 +27,7 @@ function parseInput(Sys,msg,uid,uname){
 	else if(trigger.match(/^ccsu$/) != null) return exports.CoCCrazy.ccsu(Sys,uname);
 
 	//////////基本擲骰//////////
-	else if(trigger.match("d") !=null){
+	else if(trigger.match("d") !=null || mainMsg[1].match("d") !=null){
 		return exports.Dice.NormalDy(mainMsg);
 	}
 	//////////CoC擲骰//////////
