@@ -17,14 +17,14 @@ function ChannalCheck(UserID,UserN){
 	DBmanage.ChannalUpdate(talkChannal[TCL]);
 }
 function SecretTalk(UserID,Channal,myText) {
-	///匿名淦話
+	///匿名私訊
 	if(Channal == null){
 		rply[0] = 'rply';
 		rply[1] = '這是目前有登錄的頻道清單：';
 		for(var a = 0;a< talkChannal.length;a++){
 			rply[1] += '\n'+(a+1) +'\.'+talkChannal[a].channal_name;
 		}
-		rply[1] += '\n\n 想要進行匿名對話，請輸入[淦話 頻道編號 對話內容]';
+		rply[1] += '\n\n 想要進行匿名對話，請輸入[私訊 頻道編號 對話內容]';
 		        return rply;
 	}else if(talkChannal[Channal-1] == null){
 		rply[0] = 'rply';
@@ -35,7 +35,7 @@ function SecretTalk(UserID,Channal,myText) {
 		if(myText == null){
 			rply[0] = 'rply';
 		        rply[1] = '頻道名稱:'+ talkChannal[Channal-1].channal_name+'\
-                                \n\n 想要進行匿名對話，請輸入[淦話 頻道編號 對話內容]';
+                                \n\n 想要進行匿名對話，請輸入[私訊 頻道編號 對話內容]';
 		        return rply;
 		}else{
 			rply[0] = 'push';
