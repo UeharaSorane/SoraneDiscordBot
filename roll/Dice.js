@@ -97,8 +97,8 @@ function NormalDy(msg){
 		if(msg[0]<1){
 			rply[1] = "我有點無法理解小於1次是什麼概念...";
 			return rply;
-		}else if(msg[0]>200){
-			rply[1] = "超過200次...你自己骰！";
+		}else if(msg[0]>100){
+			rply[1] = "超過100次...你自己骰！";
 			return rply;
 		}else{
 			many = Math.ceil(msg[0]);
