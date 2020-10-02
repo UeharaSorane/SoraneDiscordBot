@@ -17,6 +17,7 @@ var chatmode = false;
 
 /////Line Bot架設/////
 bot.on('message', function(event) {
+	console.log("接收到資訊");
 	event.source.profile().then(function (profile) {
 		
 		/////以下是擷取下來的資源/////
