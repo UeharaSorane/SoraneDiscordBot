@@ -23,7 +23,7 @@ function menu(UserN){
 						"text": "CoC骰子功能"
 						},
 						{
-						"type": "message",
+						"type": "postback",
 						"label": "---",
 						"text": ""
 						}
