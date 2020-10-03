@@ -53,6 +53,11 @@ function menu(UserN){
 						"type": "message",
 						"label": "報時",
 						"text": "報時"
+						},
+						{
+						"type": "message",
+						"label": "閒聊",
+						"text": "空音"
 						}
 					]
 				}
