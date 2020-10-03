@@ -39,6 +39,24 @@ function menu(UserN){
 						"text": "插旗"
 						}
 					]
+				},
+				{
+					"title": "嗨！" + UserN + "，請問要做什麼？",
+					"text": "其他選單:",
+					"actions": [{
+						"type": "message",
+						"label": "打開文字版說明書",
+						"text": "help"},
+						{
+						"type": "message",
+						"label": "報時",
+						"text": "報時"},
+						{
+						"type": "message",
+						"label": "閒聊",
+						"text": "空音"
+						}
+					]
 				}
 			]
 		}
