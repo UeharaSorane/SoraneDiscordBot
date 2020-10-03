@@ -21,6 +21,11 @@ function menu(UserN){
 						"type": "message",
 						"label": "CoC骰子功能",
 						"text": "CoC骰子功能"
+						},
+						{
+						"type": "message",
+						"label": "閒聊",
+						"text": "空音"
 						}
 					]
 				},
@@ -37,6 +42,11 @@ function menu(UserN){
 						"type": "message",
 						"label": "立死旗",
 						"text": "插旗"
+						},
+						{
+						"type": "message",
+						"label": "閒聊",
+						"text": "空音"
 						}
 					]
 				},
