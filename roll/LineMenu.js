@@ -10,6 +10,20 @@ function menu(UserN){
 			"columns" : [
 				{
 					"title": "嗨！" + UserN + "，請問要做什麼？",
+					"text": "TRPG骰子選單:",
+					"actions": [{
+						"type": "message",
+						"label": "基本骰子功能",
+						"text": "基本骰子功能"},
+						{
+						"type": "message",
+						"label": "CoC骰子功能",
+						"text": "CoC骰子功能"
+						}
+					]
+				},
+				{
+					"title": "嗨！" + UserN + "，請問要做什麼？",
 					"text": "娛樂選單:",
 					"actions": [{
 						"type": "message",
@@ -27,7 +41,7 @@ function menu(UserN){
 					"text": "其他選單:",
 					"actions": [{
 						"type": "message",
-						"label": "打開幫助",
+						"label": "打開文字版說明書",
 						"text": "help"},
 						{
 						"type": "message",
