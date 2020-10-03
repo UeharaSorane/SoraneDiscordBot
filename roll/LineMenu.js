@@ -24,22 +24,7 @@ function menu(UserN){
 						}
 					]
 				},
-				{
-					"title": "嗨！" + UserN + "，請問要做什麼？",
-					"text": "娛樂選單:",
-					"actions": [
-						{
-						"type": "message",
-						"label": "今日運氣",
-						"text": "今天的運氣"
-						},
-						{
-						"type": "message",
-						"label": "立死旗",
-						"text": "插旗"
-						}
-					]
-				},
+				
 				{
 					"title": "嗨！" + UserN + "，請問要做什麼？",
 					"text": "其他選單:",
