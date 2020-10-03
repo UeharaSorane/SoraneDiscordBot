@@ -8,10 +8,7 @@ function menu(UserN){
 		  "template": {
 		  	"type": "buttons",
 		  		"text":"嗨！" + UserN + "，請問要做什麼？",
-		  		"actions": [{
-					"type": "message",
-					"label": "開啟CoC選單",
-					"text": "CoC選單"},
+		  		"actions": [
 					{
 					"type": "message",
 					"label": "開啟娛樂選單",
