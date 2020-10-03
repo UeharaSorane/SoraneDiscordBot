@@ -24,22 +24,35 @@ function menu(UserN){
 						}
 					]
 				},
-				
 				{
 					"title": "嗨！" + UserN + "，請問要做什麼？",
-					"text": "其他選單:",
-					"actions": [{
-						"type": "message",
-						"label": "打開文字版說明書",
-						"text": "help"},
+					"text": "娛樂選單:",
+					"actions": [
 						{
 						"type": "message",
-						"label": "報時",
-						"text": "報時"},
+						"label": "今日運氣",
+						"text": "今天的運氣"
+						},
 						{
 						"type": "message",
-						"label": "閒聊",
-						"text": "空音"
+						"label": "立死旗",
+						"text": "插旗"
+						}
+					]
+				},
+				{
+					"title": "嗨！" + UserN + "，請問要做什麼？",
+					"text": "娛樂選單:",
+					"actions": [
+						{
+						"type": "message",
+						"label": "今日運氣",
+						"text": "今天的運氣"
+						},
+						{
+						"type": "message",
+						"label": "立死旗",
+						"text": "插旗"
 						}
 					]
 				}
