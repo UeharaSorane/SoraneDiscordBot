@@ -22,6 +22,7 @@ function parseInput(msg,uid,uname){
 	else if(trigger.match(/^目錄$/) != null) return exports.LineMenu.menu(uname);
 	
 	//////////趣味功能//////////
+	else if(trigger.match(/^娛樂選單$/) != null) return exports.LineMenu.funnymenu(uname);
 	else if(trigger.match(/運氣/) != null) return exports.funny.randomLuck(mainMsg);
 	
 
