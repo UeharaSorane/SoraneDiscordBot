@@ -34,8 +34,8 @@ function parseInput(msg,uid,uname){
 	else if(trigger.match(/^ccb$/) != null){
 		return exports.CoCDice.ccb(mainMsg[1],mainMsg[2],mainMsg[3],uname);
 	}
-	else if(trigger.match(/^ccrt$/) != null) return exports.CoCCrazy.ccrt(uname);
-	else if(trigger.match(/^ccsu$/) != null) return exports.CoCCrazy.ccsu(uname);
+	//else if(trigger.match(/^ccrt$/) != null) return exports.CoCCrazy.ccrt(uname);
+	//else if(trigger.match(/^ccsu$/) != null) return exports.CoCCrazy.ccsu(uname);
 	
 	///////全部都不是的狀況/////
 	else{
