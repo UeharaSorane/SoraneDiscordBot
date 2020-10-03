@@ -1,3 +1,5 @@
+var rply = [];
+
 function menu(UserN){
 	rply[0] = 'rply';
 	rply[1] = {
@@ -23,10 +25,14 @@ function menu(UserN){
 					{
 					"type": "message",
 					"label": "閒聊",
-					"text": "嘿空音"
+					"text": "空音"
 					}
 				]
 		}
 	}
 	return rply;
 }
+
+module.exports = {
+	menu
+};
