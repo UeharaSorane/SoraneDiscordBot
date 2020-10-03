@@ -62,5 +62,5 @@ function menu(UserN){
 	return rply;
 }
 module.exports = {
-	menu,
+	menu
 };
