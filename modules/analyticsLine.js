@@ -28,7 +28,7 @@ function parseInput(msg,uid,uname){
 	//////////基本擲骰//////////
 	else if(trigger.match("d") !=null || trigger.match(/^[0-9]+$/) !=null){
 		return exports.Dice.NormalDy(mainMsg);
-	
+	}
 	//////////CoC擲骰//////////
 
 	///////全部都不是的狀況/////
