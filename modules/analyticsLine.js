@@ -11,7 +11,7 @@ function parseInput(msg,uid,uname){
 	let mainMsg = msg.match(msgSplitor); //定義輸入字串
 	console.log(mainMsg);
 	let trigger = mainMsg[0].toString().toLowerCase(); //指定啟動詞在第一個詞&把大階強制轉成細階
-	
+	console.log(trigger);
 	
 /////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////分析開始//////////////////////////////////////
