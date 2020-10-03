@@ -26,9 +26,9 @@ function parseInput(msg,uid,uname){
 	else if(trigger.match(/^ccsu$/) != null) return exports.CoCCrazy.ccsu(uname);
 
 	//////////基本擲骰//////////
-	else if(trigger.match("d") !=null || mainMsg[1].match("d") !=null){
+	else if(trigger.match("d") !=null || trigger.match(/^[0-9]+$/) !=null){
 		return exports.Dice.NormalDy(mainMsg);
-	}
+	
 	//////////CoC擲骰//////////
 
 	///////全部都不是的狀況/////
