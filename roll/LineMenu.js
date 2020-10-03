@@ -24,8 +24,8 @@ function menu(UserN){
 						},
 						{
 						"type": "message",
-						"label": "閒聊",
-						"text": "空音"
+						"label": "---",
+						"text": ""
 						}
 					]
 				},
